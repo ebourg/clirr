@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
   - Maven 2.x parent pom file for Clirr.
   -
@@ -48,10 +49,10 @@
   <!-- who the developers are for the project -->
   <developers>
       <developer>
-          <name>Lars KÃ¼hne</name>
+          <name>Lars Kühne</name>
           <id>lkuehne</id>
           <!--      <email>lkuehne at users sourceforge net</email> -->
-          <organization>ppi Media</organization>
+          <organization></organization>
           <timezone>+1</timezone>
           <roles>
               <role>Java Developer</role>
@@ -61,9 +62,9 @@
       <developer>
           <name>Vincent Massol</name>
           <id>vmassol</id>
-          <organization>Apache Software Foundation</organization>
+          <organization></organization>
           <timezone>+1</timezone>
-          <url>http://blogs.codehaus.org/people/vmassol</url>
+          <url>https://twitter.com/vmassol</url>
           <roles>
               <role>Initial Inspiration and Feedback</role>
               <role>Java Developer</role>
@@ -73,8 +74,8 @@
       <developer>
           <name>Simon Kitching</name>
           <id>s_kitching</id>
-          <organization>ECN</organization>
-          <timezone>+12</timezone>
+          <organization></organization>
+          <timezone>+1</timezone>
           <roles>
               <role>Java Developer</role>
           </roles>
