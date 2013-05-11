@@ -32,9 +32,9 @@
 
 <module name="Checker">
 
-    <!-- Checks that a package.html file exists for each package.     -->
-    <!-- See http://checkstyle.sf.net/config_javadoc.html#PackageHtml -->
-    <module name="PackageHtml"/>
+    <!-- Checks that a package documentation exists for each package.     -->
+    <!-- See http://checkstyle.sf.net/config_javadoc.html#JavadocPackage -->
+    <module name="JavadocPackage"/>
 
     <!-- Checks whether files end with a new line.                        -->
     <!-- See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile -->
@@ -44,6 +44,14 @@
     <!-- See http://checkstyle.sf.net/config_misc.html#Translation -->
     <module name="Translation"/>
 
+    <!-- Checks for Headers                                -->
+    <!-- See http://checkstyle.sf.net/config_header.html   -->
+    <module name="Header">
+        <property name="headerFile" value="${checkstyle.header.file}"/>
+    </module>
+
+    <module name="FileLength"/>
+    <module name="FileTabCharacter"/>
 
     <module name="TreeWalker">
 
@@ -81,21 +89,6 @@
         <module name="TypeName"/>
 
 
-        <!-- Checks for Headers                                -->
-        <!-- See http://checkstyle.sf.net/config_header.html   -->
-        <module name="Header">
-            <!-- The follow property value demonstrates the ability     -->
-            <!-- to have access to ANT properties. In this case it uses -->
-            <!-- the ${basedir} property to allow Checkstyle to be run  -->
-            <!-- from any directory within a project. See property      -->
-            <!-- expansion,                                             -->
-            <!-- http://checkstyle.sf.net/config.html#properties        -->
-            <property
-                 name="headerFile"
-                 value="${checkstyle.header.file}"/>
-        </module>
-
-
         <!-- Checks for imports                              -->
         <!-- See http://checkstyle.sf.net/config_import.html -->
         <module name="AvoidStarImport"/>
@@ -106,7 +99,6 @@
 
         <!-- Checks for Size Violations.                    -->
         <!-- See http://checkstyle.sf.net/config_sizes.html -->
-        <module name="FileLength"/>
         <module name="LineLength">
           <property name="max" value="110"/>
         </module> 
@@ -124,7 +116,6 @@
 <!-- checkstyle 3.2
         <module name="TypecastParenPad"/>
 -->
-        <module name="TabCharacter"/>
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround"/>
 
@@ -151,7 +142,6 @@
         <!-- Checks for common coding problems               -->
         <!-- See http://checkstyle.sf.net/config_coding.html -->
         <!-- <module name="AvoidInlineConditionals"/> not necessary for clirr, all developers are smart enough to figure out the meaning of "?:" -->
-        <module name="DoubleCheckedLocking"/>    <!-- MY FAVOURITE -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
 <!-- <module name="HiddenField"/> IDEA does smart syntax highlighting -->
@@ -179,10 +169,12 @@
     
         <!-- don't like this too much: <module name="FinalParameters"/> -->
 
-        <module name="GenericIllegalRegexp">
+        <module name="Regexp">
             <property name="format" value="\s+$"/>
+            <property name="illegalPattern" value="true"/>
             <property name="message" value="Line has trailing spaces."/>
         </module>
+
         <module name="TodoComment">
             <property name="severity" value="warning"/>
         </module>
