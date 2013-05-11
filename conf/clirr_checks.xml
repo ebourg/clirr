@@ -170,7 +170,7 @@
         <!-- don't like this too much: <module name="FinalParameters"/> -->
 
         <module name="Regexp">
-            <property name="format" value="\s+$"/>
+            <property name="format" value=" +$"/>
             <property name="illegalPattern" value="true"/>
             <property name="message" value="Line has trailing spaces."/>
         </module>
