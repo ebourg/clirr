@@ -18,7 +18,7 @@
             </p>
             <p>
                 Note that anything you contribute must have the same license
-                as the rest of Clirr, i.e. ASL2, Copyright Lars Kühne.
+                as the rest of Clirr, i.e. LGPL, Copyright Lars Kühne.
             </p>
         </section>
         <section name="Copyright Lars? Why not copyright myself?">
@@ -37,7 +37,7 @@
             </p>
             <p>
                 In fact it doesn't. Think about it: You give copyright to Lars,
-                Lars immediately gives you the right to use the code under ASL2.
+                Lars immediately gives you the right to use the code under LGPL.
                 What have you lost? You can still
             </p>
             <ul>
@@ -50,14 +50,14 @@
                     Lars is running the project.</li>
             </ul>
             <p>
-                Because the code is licensed under the ASL2,
+                Because the code is licensed under the LGPL,
                 the only thing you give up by assigning copyright to Lars
                 is the right to veto a re-licensing of the code.
                 For example Lars could eventually re-license Clirr under
-                a new version of the Apache license without having to contact
+                the Apache license without having to contact
                 everybody who has ever contributed.
                 Note that you would not lose any of the work you (and others)
-                have done as it would still be licensed under ASL2 - <em>noone
+                have done as it would still be licensed under LGPL - <em>noone
                 can ever take these rights away from you</em>!
             </p>
         </section>
