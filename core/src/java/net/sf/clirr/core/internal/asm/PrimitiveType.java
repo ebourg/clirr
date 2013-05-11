@@ -34,12 +34,12 @@ class PrimitiveType implements JavaType
         this.classFormatVersion = classFormatVersion;
         this.basicName = name;
     }
-    
+
     public int getClassFormatVersion()
     {
         return classFormatVersion;
     }
-    
+
     public String getBasicName()
     {
         return basicName;
@@ -109,7 +109,7 @@ class PrimitiveType implements JavaType
     {
         return Scope.PUBLIC;
     }
-    
+
     public String toString()
     {
         return getName();

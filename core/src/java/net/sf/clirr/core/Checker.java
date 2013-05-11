@@ -157,7 +157,7 @@ public final class Checker implements ApiDiffDispatcher
             {
                 if (!scopeSelector.isSelected(currentClass.getEffectiveScope()))
                 {
-                    continue;   
+                    continue;
                 }
                 final String className = currentClass.getName();
                 final ApiDifference diff =
@@ -171,7 +171,7 @@ public final class Checker implements ApiDiffDispatcher
                 final Scope classScope = compatBaselineClass.getEffectiveScope();
                 if (!scopeSelector.isSelected(classScope))
                 {
-                    continue;   
+                    continue;
                 }
                 final String className = compatBaselineClass.getName();
                 final Severity severity = classScope.isLessVisibleThan(

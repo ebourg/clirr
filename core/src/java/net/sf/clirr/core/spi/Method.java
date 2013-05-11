@@ -30,7 +30,7 @@ public interface Method extends Named, Scoped
     JavaType getReturnType();
 
     /**
-     * 
+     *
      * @return the argument types of this method, never null.
      */
     JavaType[] getArgumentTypes();
@@ -38,7 +38,7 @@ public interface Method extends Named, Scoped
     JavaType[] getDeclaredExceptions();
 
     boolean isFinal();
-    
+
     boolean isStatic();
 
     boolean isAbstract();

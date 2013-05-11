@@ -294,7 +294,7 @@ public final class AntTask extends Task
         try
         {
             ClassFilter classSelector = buildClassFilter();
-            
+
             DefaultTypeArrayBuilderFactory tabFactory = new DefaultTypeArrayBuilderFactory();
 
             TypeArrayBuilder tab1 = tabFactory.build();
@@ -302,10 +302,10 @@ public final class AntTask extends Task
 
             final JavaType[] origClasses =
                 tab1.createClassSet(origJars, origThirdPartyLoader, classSelector);
-            
+
             final JavaType[] newClasses =
                 tab2.createClassSet(newJars, newThirdPartyLoader, classSelector);
-            
+
             checker.reportDiffs(origClasses, newClasses);
         }
         catch (CheckerException ex)

@@ -23,10 +23,10 @@ import net.sf.clirr.core.internal.asm.AsmTypeArrayBuilder;
 
 /**
  * Creates a default implementation of the TypeArrayBuilder interface.
- * 
+ *
  * By using this class, front end code can avoid instantiating clirr internal
  * implementations directly.
- * 
+ *
  * @author lk
  */
 public final class DefaultTypeArrayBuilderFactory
@@ -42,7 +42,7 @@ public final class DefaultTypeArrayBuilderFactory
     /**
      * Creates a new instance of a {@link TypeArrayBuilder}. Note that no
      * guarantees are made about the actual implementation type.
-     * 
+     *
      * @return a new instance
      */
     public TypeArrayBuilder build()

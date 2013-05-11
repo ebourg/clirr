@@ -34,7 +34,7 @@ import org.objectweb.asm.ClassReader;
 
 /**
  * Stores all known JavaTypes, used to implement cross references between types.
- *  
+ *
  * @author lkuehne
  */
 class Repository
@@ -60,14 +60,14 @@ class Repository
     AsmJavaType readJavaTypeFromStream(InputStream is) throws IOException
     {
         ClassReader parser = new ClassReader(is);
-        
+
         ClassInfoCollector infoCollector = new ClassInfoCollector(this);
-        
+
         // TODO: Code for ASM 3.0: parser.accept(infoCollector, ClassReader.SKIP_CODE | ClassReader.SKIP_DEBUG);
         parser.accept(infoCollector, true);
-        
+
         final AsmJavaType javaType = infoCollector.getJavaType();
-        
+
         nameTypeMap.put(javaType.getName(), javaType);
         return javaType;
     }
@@ -89,24 +89,24 @@ class Repository
             typeName = fullTypeName;
             dimension = 0;
         }
-        
+
         // search cache for basic typeName
         JavaType type = (JavaType) nameTypeMap.get(typeName);
         if (type != null)
         {
             return wrapInArrayTypeIfRequired(dimension, type);
         }
-        
+
         // OK, typeName is not in the cache. Is it a primitive type?
         final Matcher primitiveMatcher = PRIMITIVE_PATTERN.matcher(typeName);
         if (primitiveMatcher.matches())
         {
-            
+
             JavaType primitive = new PrimitiveType(primitiveClassFormatVersion, typeName);
             nameTypeMap.put(typeName, primitive);
-            return wrapInArrayTypeIfRequired(dimension, primitive); 
+            return wrapInArrayTypeIfRequired(dimension, primitive);
         }
-        
+
         // it must be a normal class then, load it as a resource
         String resourceName = typeName.replace('.', '/') + ".class";
         InputStream is = classLoader.getResourceAsStream(resourceName);

@@ -34,7 +34,7 @@ class ClassInfoCollector extends ClassAdapter
 {
     private AsmJavaType javaType;
     private final Repository repository;
-    
+
     ClassInfoCollector(Repository repository)
     {
         super(new EmptyVisitor());
@@ -54,8 +54,8 @@ class ClassInfoCollector extends ClassAdapter
         Type type = Type.getType(desc);
         final AsmField asmField = new AsmField(javaType, access, name, value, type);
         javaType.addField(asmField);
-        
-        // currently no need for visiting annotations 
+
+        // currently no need for visiting annotations
         return null;
     }
 
@@ -63,15 +63,15 @@ class ClassInfoCollector extends ClassAdapter
     {
         final Type[] argumentTypes = Type.getArgumentTypes(desc);
         final Type returnType = Type.getReturnType(desc);
-        final AsmMethod asmMethod = 
+        final AsmMethod asmMethod =
             new AsmMethod(javaType, access, returnType, name, argumentTypes, exceptions);
         javaType.addMethod(asmMethod);
 
-        // currently no need for visiting annotations 
+        // currently no need for visiting annotations
         return null;
     }
-    
-    
+
+
     public void visitInnerClass(String name, String outerName, String innerName, int access)
     {
         super.visitInnerClass(name, outerName, innerName, access);
@@ -85,7 +85,7 @@ class ClassInfoCollector extends ClassAdapter
         }
         return internal.replaceAll("/", ".");
     }
-    
+
     private static String[] prettyprintClassNames(String[] internal)
     {
         String[] ret = new String[internal.length];

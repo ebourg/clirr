@@ -50,7 +50,7 @@ public class ClassFormatVersionCheck extends AbstractDiffReporter implements Cla
         {
             // don't use severity getSeverity(compatBaseline, Severity.ERROR) here,
             // as even classes that are not visible to the client code will trigger a
-            // requirement for a higher JVM version.  
+            // requirement for a higher JVM version.
             log(MSG_CLASS_FORMAT_VERSION_INCREASED, Severity.ERROR, className, null, null, args);
         }
         else if (newClassFormatVersion < oldClassFormatVersion)

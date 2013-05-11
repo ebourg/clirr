@@ -35,13 +35,13 @@ import net.sf.clirr.core.spi.Scope;
 class AsmJavaType extends AbstractAsmScoped implements JavaType
 {
     private final Repository repository;
-    
+
     private final String basicName;
 
     private String superClassName;
-    
+
     private final List fields = new ArrayList();
-    
+
     private final List methods = new ArrayList();
 
     private final String[] interfaceNames;
@@ -69,7 +69,7 @@ class AsmJavaType extends AbstractAsmScoped implements JavaType
     {
         return basicName;
     }
-    
+
     public String getName()
     {
         // arrays are always represented by ArrayType instances, so name == basicName
@@ -137,7 +137,7 @@ class AsmJavaType extends AbstractAsmScoped implements JavaType
     {
         fields.add(field);
     }
-    
+
     public Field[] getFields()
     {
         Field[] ret = new Field[fields.size()];
@@ -153,7 +153,7 @@ class AsmJavaType extends AbstractAsmScoped implements JavaType
 
     public int getArrayDimension()
     {
-        // array types are represented by ArrayType 
+        // array types are represented by ArrayType
         return 0;
     }
 
@@ -219,6 +219,6 @@ class AsmJavaType extends AbstractAsmScoped implements JavaType
     {
         return getName().hashCode();
     }
-    
-    
+
+
 }

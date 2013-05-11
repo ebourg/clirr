@@ -25,12 +25,12 @@ import java.net.URL;
 import java.net.URLClassLoader;
 
 /**
- * Helper class for dealing with ClassLoaders. 
+ * Helper class for dealing with ClassLoaders.
  * @author lk
  */
 public final class ClassLoaderUtil
 {
-    
+
     /** prevent instantiation. */
     private ClassLoaderUtil()
     {

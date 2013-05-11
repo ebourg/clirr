@@ -112,7 +112,7 @@ public abstract class AbstractDiffReporter
      */
     protected final Severity getSeverity(JavaType clazz, Method method, Severity sev)
     {
-        
+
         if (!method.getDeclaredScope().isLessVisibleThan(Scope.PROTECTED))
         {
             return getSeverity(clazz, sev);

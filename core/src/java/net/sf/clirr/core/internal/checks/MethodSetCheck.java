@@ -606,11 +606,11 @@ public class MethodSetCheck
         {
             return;
         }
-        
+
         // TODO: Check assignability. If the new return type is
         // assignable to the old type, then the code is source-code
         // compatible even when binary-incompatible.
-        
+
         if (bReturnType != null && cReturnType != null && bReturnType.getName().equals(cReturnType.getName()))
         {
             return;

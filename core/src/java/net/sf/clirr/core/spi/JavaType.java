@@ -21,7 +21,7 @@ package net.sf.clirr.core.spi;
 
 /**
  * A Java Type (Object, Interface, primitive type or void).
- * 
+ *
  * @author lkuehne
  */
 public interface JavaType extends Named, Scoped
@@ -29,14 +29,14 @@ public interface JavaType extends Named, Scoped
     /**
      * The class format version of this class's bytecode.
      * @return the class format version, like 49 for code that has been
-     * generated with the Java5 compiler. 
+     * generated with the Java5 compiler.
      */
     int getClassFormatVersion();
-    
+
     /**
      * The type's fully qualified class name.
      * In case of array types, this is the name without the array brackets
-     * 
+     *
      * @return a fully qualified class name,
      * like <code>"my.company.procuct.SampleClass"</code>.
      */
@@ -45,7 +45,7 @@ public interface JavaType extends Named, Scoped
     /**
      * The type's fully qualified class name.
      * In case of array types, this is the name with the array brackets.
-     * 
+     *
      * @return a fully qualified class name,
      * like <code>"my.company.procuct.SampleClass"</code>.
      */
@@ -53,7 +53,7 @@ public interface JavaType extends Named, Scoped
 
     /**
      * The containing class if this is an inner class.
-     * 
+     *
      * @return the containing class or <code>null</code>
      * if this JavaType does not represent an inner class.
      */
@@ -62,25 +62,25 @@ public interface JavaType extends Named, Scoped
 
     /**
      * Return the superclasses of this class.
-     * 
-     * @return the chain of superclasses of this type, starting from 
+     *
+     * @return the chain of superclasses of this type, starting from
      * the direct superclass and ending with <code>java.lang.Object</code>.
      */
     JavaType[] getSuperClasses();
 
     /**
      * Return the list of all interfaces this class implements.
-     * 
-     * @return the list of all interfaces this class implements/extends, 
+     *
+     * @return the list of all interfaces this class implements/extends,
      * excluding <code>this</code> if this JavaType represents an interface itself.
      */
     JavaType[] getAllInterfaces();
 
     /**
      * All methods that are declared by this class.
-     * Methods of superclasses/interfaces are not returned 
+     * Methods of superclasses/interfaces are not returned
      * if they are not overridden/redeclared here.
-     * 
+     *
      * @return all methods that are declared by this class.
      */
     Method[] getMethods();
@@ -88,7 +88,7 @@ public interface JavaType extends Named, Scoped
     /**
      * All fields that are declared by this class.
      * Fields of superclasses/interfaces are not returned.
-     *  
+     *
      * @return all fields that are declared by this class.
      */
     Field[] getFields();
@@ -98,13 +98,13 @@ public interface JavaType extends Named, Scoped
      * @return 0 if this type does not represent an array.
      */
     int getArrayDimension();
-    
+
     /**
      * Whether this type represents a primitive type like <code>int</code>.
      * @return true iff this type represents a primitive type.
      */
     boolean isPrimitive();
-    
+
     /**
      * Whether this class is declared as final.
      * @return true iff this type represents a final class or a {@link #isPrimitive() primitive} type.
@@ -112,17 +112,17 @@ public interface JavaType extends Named, Scoped
     boolean isFinal();
 
     /**
-     * Whether this type represents a class that is declared as abstract. 
+     * Whether this type represents a class that is declared as abstract.
      * Note that interfaces are not abstract.
-     * 
+     *
      * @return true iff this type represents an abstract class.
      */
     boolean isAbstract();
 
     /**
      * Whether this type represents an interface.
-     * 
-     * @return true iff this type represents an interface. 
+     *
+     * @return true iff this type represents an interface.
      */
     boolean isInterface();
 }

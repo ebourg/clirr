@@ -39,7 +39,7 @@ class AsmMethod extends AbstractAsmScoped implements Method
     private final String[] exceptions;
 
     private AsmJavaType container;
-    
+
     AsmMethod(AsmJavaType container, int access, Type returnType,
             String name, Type[] argumentTypes, String[] exceptions)
     {
@@ -51,7 +51,7 @@ class AsmMethod extends AbstractAsmScoped implements Method
         this.argumentTypes = argumentTypes;
         this.exceptions = exceptions;
     }
-    
+
     public JavaType getReturnType()
     {
         if (Type.VOID_TYPE.equals(returnType))
@@ -71,7 +71,7 @@ class AsmMethod extends AbstractAsmScoped implements Method
         }
         return ret;
     }
-    
+
     private JavaType findJavaType(Type asmType)
     {
         String name = asmType.getClassName();

@@ -34,7 +34,7 @@ class ArrayType implements JavaType
         this.basicType = basicType;
         this.dimension = dimension;
     }
-    
+
     public String getBasicName()
     {
         return basicType.getBasicName();
@@ -124,7 +124,7 @@ class ArrayType implements JavaType
 
     public String toString()
     {
-        
+
         return "ArrayType[" + basicType.toString() + " ^ " + dimension + "]";
     }
 }

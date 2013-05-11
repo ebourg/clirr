@@ -159,7 +159,7 @@ public final class ClassSelector implements ClassFilter
         String className = clazz.getName();
         int index = className.lastIndexOf('.');
         String packageName = (index < 0) ? "" : className.substring(0, index);
-        
+
         if (packages.contains(packageName))
         {
             return true;

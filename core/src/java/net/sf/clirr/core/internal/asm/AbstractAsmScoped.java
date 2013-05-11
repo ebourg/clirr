@@ -33,7 +33,7 @@ abstract class AbstractAsmScoped implements Scoped
     {
         this.access = access;
     }
-    
+
     public Scope getDeclaredScope()
     {
         if (checkFlag(Opcodes.ACC_PRIVATE))
