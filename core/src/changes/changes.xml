@@ -19,10 +19,10 @@
             Removed dependency commons-lang.
         </action>
         <action dev="lkuehne" type="add">
-            Converted the build system to Maven 2, dropped Maven 1 build system and Maven 1 plugin.
+            Converted the build system to Maven 3, dropped Maven 1 build system and Maven 1 plugin.
         </action>
         <action dev="lkuehne" type="fix">
-            Upgraded dependencies (ant, commons-cli) to recent release versions.
+            Upgraded dependencies (ant, commons-cli) to newer release versions.
         </action>
         <action dev="lkuehne" type="add">
             Dropped support for JDK 1.3. The API now uses chained exceptions,
