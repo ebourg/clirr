@@ -25,12 +25,12 @@ provide some detailed background material:
                 <ul>
                     <li>
 the article
-                        <a href="http://eclipse.org/eclipse/development/java-api-evolution.html">Evolving
+                        <a href="http://wiki.eclipse.org/index.php/Evolving_Java-based_APIs">Evolving
 Java-based APIs</a> on the Eclipse web site.
                     </li>
                     <li>
 the
-                        <a href="http://java.sun.com/docs/books/jls/second_edition/html/binaryComp.doc.html">Binary Compatibility</a>
+                        <a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-13.html">Binary Compatibility</a>
 section in the Java Language specification.
                     </li>
                 </ul>
