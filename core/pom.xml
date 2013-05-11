@@ -11,6 +11,14 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License (LGPL)</name>
+      <url>http://www.gnu.org/licenses/lgpl.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.sf.clirr</groupId>
   <artifactId>clirr-core</artifactId>
@@ -227,6 +235,17 @@
         <artifactId>maven-surefire-report-plugin</artifactId>
         <version>2.14.1</version>
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.10</version>
+        <configuration>
+          <configLocation>../conf/clirr_checks.xml</configLocation>
+          <headerLocation>../conf/javaheader.txt</headerLocation>
+        </configuration>
+      </plugin>
+
 <!--
 maven-jdepend-plugin
 maven-license-plugin
