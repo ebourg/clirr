@@ -50,8 +50,11 @@ import org.apache.commons.cli.ParseException;
  * for binary compatibility between two versions of the same application.
  */
 
-public class Clirr
+public final class Clirr
 {
+    private Clirr()
+    {
+    }
 
     public static void main(String[] args)
     {
@@ -187,12 +190,6 @@ public class Clirr
         }
     }
 
-    /**
-     * @param args
-     * @param parser
-     * @param options
-     * @return
-     */
     private CommandLine parseCommandLine(String[] args, Options options)
     {
         BasicParser parser = new BasicParser();
@@ -210,10 +207,8 @@ public class Clirr
         return cmdline;
     }
 
-    /**
-     * @return
-     */
-    private Options defineOptions() {
+    private Options defineOptions()
+    {
         Options options = new Options();
         options.addOption("o", "old-version", true, "jar files of old version");
         options.addOption("n", "new-version", true, "jar files of new version");

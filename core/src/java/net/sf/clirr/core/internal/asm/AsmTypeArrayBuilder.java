@@ -132,7 +132,8 @@ public class AsmTypeArrayBuilder extends TypeArrayBuilderSupport
                         return !pathname.isDirectory() && pathname.getName().endsWith(".class");
                     }
                 });
-                for (int i = 0; i < files.length; i++) {
+                for (int i = 0; i < files.length; i++)
+                {
                     ret.add(files[i]);
                 }
 

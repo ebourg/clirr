@@ -24,7 +24,8 @@ package net.sf.clirr.core.spi;
  *
  * @author lkuehne
  */
-public interface Named {
+public interface Named
+{
 
     /**
      * Returns the name of this object.
