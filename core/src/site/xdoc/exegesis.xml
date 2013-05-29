@@ -749,7 +749,7 @@
         <p>Severity: <code>INFO</code></p>
         <p>
           The new class is compiled with a lower "-target" compiler setting.
-          Newer Java compilers and JVMs versions support all previous class
+          Newer Java compilers and JVM versions support all previous class
           file formats, so this is a binary and source compatible change.
         </p>
       </section>
