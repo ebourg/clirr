@@ -37,8 +37,9 @@ public final class ClassLoaderUtil
     }
 
     /**
-     * @param cpEntries
-     * @return
+     * Builds a ClassLoader for a given classpath.
+     * @param cpEntries classpath entries
+     * @return the new ClassLoader
      */
     public static ClassLoader createClassLoader(final String[] cpEntries)
     {
