@@ -12,6 +12,7 @@
   <artifactId>clirr</artifactId>
   <packaging>pom</packaging>
   <name>CLIRR</name>
+  <inceptionYear>2004</inceptionYear>
   <version>0.7-SNAPSHOT</version>
   <licenses>
     <license>
