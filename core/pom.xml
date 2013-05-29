@@ -166,6 +166,27 @@
       </plugin>
 
       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9</version>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>jar</goal>
+                  </goals>
+                  <phase>package</phase>
+              </execution>
+          </executions>
+          <configuration>
+              <encoding>${project.build.sourceEncoding}</encoding>
+              <show>protected</show>
+              <excludePackageNames>*.internal</excludePackageNames>
+              <overview>${basedir}/src/java/net/sf/clirr/overview.html</overview>
+              <bottom></bottom>
+          </configuration>
+      </plugin>
+
+      <plugin>
         <!--
           - Build an additional artifact which is a jar that contains
           - all the clirr classes plus all classes from all runtime
@@ -220,7 +241,9 @@
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
           <show>protected</show>
-          <excludePackageNames>net.sf.clirr.core.internal</excludePackageNames>
+          <excludePackageNames>*.internal</excludePackageNames>
+          <overview>${basedir}/src/java/net/sf/clirr/overview.html</overview>
+          <bottom></bottom>
         </configuration>
       </plugin>
 
